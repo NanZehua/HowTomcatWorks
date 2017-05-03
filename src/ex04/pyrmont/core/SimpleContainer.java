@@ -144,6 +144,7 @@ public class SimpleContainer implements Container {
 		} catch (IOException e) {
 			System.out.println(e.toString());
 		}
+		
 		Class myClass = null;
 		DecryptClassLoader decrypt;
 		try {
@@ -151,7 +152,7 @@ public class SimpleContainer implements Container {
 			myClass = decrypt.decrypt();
 			// myClass = loader.loadClass(servletName);
 		} catch (Exception e) {
-//			System.out.println(e.toString());
+			System.out.println(e.toString());
 		}
 		
 		Servlet servlet = null;
